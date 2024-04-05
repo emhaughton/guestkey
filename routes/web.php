@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompasskeyCredential\CompasskeyCredentialUpdateController;
 use App\Http\Controllers\GuestyCredential\GuestyCredentialUpdateController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservationsController;
@@ -33,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::patch('/guesty-credential', GuestyCredentialUpdateController::class)->name('guesty_credential.update');    
+    Route::patch('/compasskey-credential', CompasskeyCredentialUpdateController::class)->name('compasskey_credential.update');    
 });
 
 require __DIR__.'/auth.php';

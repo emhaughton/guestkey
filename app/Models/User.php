@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+    use HasApiTokens, HasFactory, Notifiable/*, HasRoles*/;
 
 
     /**
@@ -47,5 +47,10 @@ class User extends Authenticatable
     public function guestyCredential(): HasOne
     {
         return $this->hasOne(GuestyCredential::class);
+    }
+
+    public function compasskeyCredential(): HasOne
+    {
+        return $this->hasOne(CompasskeyCredential::class);
     }
 }
