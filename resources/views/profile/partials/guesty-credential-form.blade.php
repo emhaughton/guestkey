@@ -15,19 +15,19 @@
 
         <div>
             <x-input-label for="name" :value="__('Client ID')" />
-            <x-text-input id="client_id" name="client_id" type="text" class="mt-1 block w-full" :value="old('name', $user->guestyCredential->client_id)" required autofocus autocomplete="client_id" />
+            <x-text-input id="client_id" name="client_id" type="text" class="mt-1 block w-full" :value="old('client_id', $user->guestyCredential?->client_id)" required autofocus autocomplete="client_id" />
             <x-input-error class="mt-2" :messages="$errors->get('client_id')" />
         </div>
 
         <div>
             <x-input-label for="name" :value="__('Client Secret')" />
-            <x-text-input id="client_secret" name="client_secret" type="text" class="mt-1 block w-full" :value="old('name', $user->guestyCredential->client_secret)" required autofocus autocomplete="client_secret" />
+            <x-text-input id="client_secret" name="client_secret" type="text" class="mt-1 block w-full" :value="old('client_secret', $user->guestyCredential?->client_secret)" required autofocus autocomplete="client_secret" />
             <x-input-error class="mt-2" :messages="$errors->get('client_secret')" />
         </div>
 
         <div>
             <x-input-label for="name" :value="__('Account ID')" />
-            <x-text-input id="account_id" name="account_id" type="text" class="mt-1 block w-full" :value="old('name', $user->guestyCredential->account_id)" required autofocus autocomplete="account_id" />
+            <x-text-input id="account_id" name="account_id" type="text" class="mt-1 block w-full" :value="old('account_id', $user->guestyCredential?->account_id)" required autofocus autocomplete="account_id" />
             <x-input-error class="mt-2" :messages="$errors->get('account_id')" />
         </div>
 
